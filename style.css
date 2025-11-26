@@ -1,4 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
+}
+
+html {
+    margin: 56px 100px 0 100px;
+    background-color: white;
+}
+/*header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*First section - hero*/
+#hero{
+    margin-top: 48px;
+}
+
+.profile-img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    
 }
