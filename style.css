@@ -104,6 +104,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
 }
 
 .logo {
@@ -577,7 +578,7 @@ footer ul a {
 
     #menu:checked~#menu-burger {
         gap: 0;
-        z-index: 3;
+        z-index: 5;
     }
 
     #menu:checked~#menu-burger>span {
