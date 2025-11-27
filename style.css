@@ -18,14 +18,16 @@
     font-size: 16px;
     font-family: "OpenSans";
     line-height: 28px;
+    transition: all 0.3s ease;
 }
 
 body {
-    padding: 56px 100px 0 100px;
+    padding: 0 100px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 h1 {
@@ -86,12 +88,18 @@ time {
     background-color: white;
 }
 
-header, section, footer {
+/* header, */
+section,
+footer {
     max-width: 1320px;
 }
 
 /*header-----------------------------*/
 header {
+    position: fixed;
+    top: 0;
+    padding: 56px 100px 26px 100px;
+    background-color: white;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -109,6 +117,10 @@ header {
 
 .logo>img {
     width: 26px;
+}
+
+#menu-burger {
+    visibility: hidden;
 }
 
 header nav {
@@ -129,6 +141,7 @@ header nav a {
 
 /*First section - hero -----------------------*/
 #hero {
+    margin-top: 150px;
     padding-top: 48px;
     padding-bottom: 72px;
     border-bottom: #0A2640 1px solid;
@@ -270,8 +283,13 @@ footer {
     margin-top: 84px;
     padding-top: 100px;
     padding-bottom: 117px;
-    display: flex;
     width: 100%;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 17px;
 }
 
 #company {
@@ -280,7 +298,6 @@ footer {
 
 #about-company {
     margin-top: 40px;
-    margin-bottom: 64px;
     color: #777777;
     width: 300px;
 }
@@ -289,7 +306,7 @@ footer {
     color: #777777;
 }
 
-#footer-navigation{
+#footer-navigation {
     display: flex;
     gap: 96px;
 }
@@ -306,7 +323,7 @@ footer ul {
     list-style: none;
 }
 
-footer li{
+footer li {
     position: relative;
 }
 
@@ -325,5 +342,364 @@ footer ul a {
     font-size: 13px;
     font-weight: 700;
     border-radius: 120px;
-    
+}
+
+/*Adaptation----------------------------------------------------*/
+@media screen and (min-width:1440px) {
+    header {
+        max-width: 1520px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+
+    #info-main-news,
+    #img-main-news {
+        width: 48%;
+    }
+
+    #company {
+        margin-right: 10vw;
+    }
+
+    #footer-navigation {
+        gap: 8vw;
+    }
+
+    footer nav {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:1325px) {
+    h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:1294px) {
+    .news {
+        width: 45%;
+    }
+
+    .news>img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:1137px) {
+    h2 {
+        font-size: 35px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    body {
+        padding: 30px 50px;
+    }
+
+    header {
+        padding: 20px 50px;
+    }
+
+    h1>span {
+        font-size: 55px;
+        line-height: 70px;
+    }
+
+    #hero {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width:950px) {
+
+    #img-main-news {
+        width: 35%;
+        height: 280px;
+    }
+
+    #info-main-news {
+        width: 60%;
+    }
+
+    .news>img {
+        height: 180px;
+    }
+
+    #left-email>h2 {
+        width: 80%;
+    }
+
+    footer {
+        margin-top: 0px;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    footer>div {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    #company {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    #about-company {
+        width: 70%;
+    }
+
+    #footer-navigation {
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    #hero>article {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #img-main-news {
+        width: 100%;
+        height: 55vh;
+        min-height: 250px;
+        max-height: 650px;
+    }
+
+    #info-main-news {
+        width: 80%;
+    }
+
+    #latest-news {
+        padding: 60px 30px;
+    }
+
+
+    footer ul {
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+}
+
+@media screen and (max-width:810px) {
+
+    .button {
+        padding: 10px 25px;
+    }
+
+    #latest-news-info {
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+
+    }
+
+    .news {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .news>img {
+        height: 65vh;
+        object-position: 20% 10%;
+        min-height: 200px;
+        max-height: 450px;
+    }
+
+    #btn-load-more-news {
+        margin-top: 40px;
+    }
+
+    #left-email>form {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    #email,
+    #btn-left-email {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:769px) {
+    * {
+        font-size: 14px;
+    }
+
+    .logo {
+        gap: 10px;
+        font-size: 35px;
+    }
+
+    .logo>img {
+        width: 22px;
+    }
+
+    #menu-burger {
+        visibility: visible;
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    #menu-burger>span,
+    #menu-burger::after,
+    #menu-burger::before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #0A2640;
+        border-radius: 25px;
+    }
+
+    header nav {
+        position: fixed;
+        top: -100vh;
+        min-height: 100vh;
+        flex-direction: column;
+        width: 100vw;
+        left: 0;
+    }
+
+    #menu:checked~#menu-burger {
+        gap: 0;
+        z-index: 3;
+    }
+
+    #menu:checked~#menu-burger>span {
+        width: 0;
+        visibility: hidden;
+    }
+
+    #menu:checked~#menu-burger::after {
+        position: relative;
+        rotate: 45deg;
+        top: -3px;
+    }
+
+    #menu:checked~#menu-burger::before {
+        position: relative;
+        rotate: -45deg;
+        top: 2px;
+    }
+
+    #menu:checked~nav {
+        top: 0;
+        justify-content: center;
+        background-color: white;
+    }
+
+    #hero {
+        margin-top: 25px;
+    }
+
+    h1>span {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    #email,
+    #btn-left-email {
+        font-size: 17px;
+        padding: 5px 15px;
+    }
+
+    footer ul {
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    footer ul a {
+        font-size: 16px;
+    }
+
+    #hiring {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    body,
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        gap: 10px;
+        font-size: 25px;
+    }
+
+    .logo>img {
+        width: 18px;
+    }
+
+    h1 {
+        font-size: 17px;
+        line-height: 25px;
+        gap: 5px;
+        margin-bottom: 30px;
+    }
+
+    h1>span {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    #latest-news {
+        padding: 30px 0px;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .news>img {
+        margin-bottom: 15px;
+    }
+
+    #about-company {
+        width: 100%;
+    }
+
+    #footer-navigation {
+        flex-wrap: wrap;
+        gap: 25px 0;
+    }
+
+    footer nav {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width:330px) {
+
+    h1>span {
+        font-size: 27px;
+    }
 }
