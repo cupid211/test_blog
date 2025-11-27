@@ -22,7 +22,7 @@
 }
 
 body {
-    padding: 0 100px;
+    padding: 56px 100px 0 100px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ time {
     background-color: white;
 }
 
-/* header, */
+header,
 section,
 footer {
     max-width: 1320px;
@@ -96,15 +96,11 @@ footer {
 
 /*header-----------------------------*/
 header {
-    position: fixed;
-    top: 0;
-    padding: 56px 100px 26px 100px;
     background-color: white;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3;
 }
 
 .logo {
@@ -132,17 +128,30 @@ header nav {
 
 header nav a {
     font-weight: 600;
+    border: none;
+    transition: border 0.2s ease;
+}
+
+header nav a:hover {
+    transition: border 0.2s ease;
+    border-bottom: #0A2640 2px solid;
 }
 
 #log-in {
     padding: 8px 40px;
     border-radius: 24px;
+    transition: all 0.5s ease;
+}
+#log-in:hover{
+    background-color: #0A2640;
+    color: white;
+    transition: all 0.5s ease;
 }
 
 
 /*First section - hero -----------------------*/
 #hero {
-    margin-top: 150px;
+    margin-top: 72px;
     padding-top: 48px;
     padding-bottom: 72px;
     border-bottom: #0A2640 1px solid;
@@ -226,6 +235,11 @@ h1>span {
     display: block;
     margin: 96px auto 0 auto;
 }
+#btn-load-more-news:hover{
+    background-color: #0A2640;
+    color: white;
+    transition: all 0.5s ease;
+}
 
 /*Third section - left-email --------------------*/
 #left-email {
@@ -277,6 +291,15 @@ h1>span {
     font-weight: 700;
     line-height: 28px;
     border-color: #65E4A3;
+}
+
+#btn-left-email:hover{
+color: white;
+}
+
+#btn-left-email:active{
+color: #65E4A3;
+background-color: #0A2640;
 }
 
 /*Footer-------------------------------------*/
@@ -334,6 +357,11 @@ footer ul a {
     line-height: 32px;
 }
 
+footer ul a:hover{
+    transition: none;
+    border-bottom: 2px solid #777777;
+}
+
 #hiring {
     position: absolute;
     top: 4px;
@@ -346,12 +374,6 @@ footer ul a {
 }
 
 /*Adaptation----------------------------------------------------*/
-@media screen and (min-width:1440px) {
-    header {
-        max-width: 1520px;
-    }
-}
-
 @media screen and (max-width:1440px) {
 
     #info-main-news,
@@ -398,10 +420,6 @@ footer ul a {
 @media screen and (max-width:1050px) {
     body {
         padding: 30px 50px;
-    }
-
-    header {
-        padding: 20px 50px;
     }
 
     h1>span {
@@ -595,7 +613,7 @@ footer ul a {
     #menu:checked~#menu-burger::before {
         position: relative;
         rotate: -45deg;
-        top: 2px;
+        top: 3px;
     }
 
     #menu:checked~nav {
@@ -605,7 +623,7 @@ footer ul a {
     }
 
     #hero {
-        margin-top: 25px;
+        margin-top: 0px;
     }
 
     h1>span {
@@ -644,8 +662,7 @@ footer ul a {
 
 @media screen and (max-width:500px) {
 
-    body,
-    header {
+    body {
         padding: 15px 20px;
     }
 
